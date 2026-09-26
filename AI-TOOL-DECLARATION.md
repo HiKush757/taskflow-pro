@@ -4,13 +4,13 @@
 
 | Tool | Model | What it was used for |
 |---|---|---|
-| Claude (Claude.ai) | Claude Sonnet 5 | Scaffolding the entire project structure (Spring Boot backend, React frontend), writing the DagEngine cycle-detection/scheduling algorithm, writing all entities/controllers/services/DTOs, writing the Flyway seed migration, writing the README, and helping debug the Windows setup (Docker/WSL install issues). |
+| Claude (Claude.ai) | Claude Sonnet 5 | Scaffolding the project structure (Spring Boot backend), writing the DagEngine cycle-detection/scheduling algorithm, writing the entities/controllers/services/DTOs, writing the Flyway seed migration |
 
 ## What was AI-assisted vs. hand-written
 
-- **AI-assisted:** The full backend (DagEngine, TaskService, AiSuggestionService, controllers, entities), the React frontend (Board, TaskCard, TaskModal), the seed data, and the README were all generated with Claude's help based on the problem statement.
+- **AI-assisted:** The full backend (DagEngine, TaskService, AiSuggestionService, controllers, entities), the React frontend (Board, TaskCard, TaskModal), the seed data, were generated with Claude's help based on the problem statement.
 - **Reviewed and modified by me:** I ran the app end-to-end (Postgres via Docker, backend via Maven, frontend via npm), manually tested drag-and-drop, the Blocked/Ready badges, adding/removing dependencies, and the AI suggestion feature in the browser to confirm they work as described.
-- **Written entirely by hand:** This was built with heavy AI assistance given the sprint timeline; all logic was verified by running it, not just reading it.
+- **Written entirely by hand:** README, The project was built with help of AI assistance given the sprint timeline; all logic was verified by running it, not just reading it.
 
 ## Verification performed
 
