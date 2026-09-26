@@ -1,0 +1,18 @@
+# Local Postgres only — for running the Spring Boot app with `mvn spring-boot:run`
+# against a real database during development and grading.
+version: "3.8"
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: taskflow_pro
+      POSTGRES_USER: taskflow
+      POSTGRES_PASSWORD: taskflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - taskflow_pgdata:/var/lib/postgresql/data
+
+volumes:
+  taskflow_pgdata:
